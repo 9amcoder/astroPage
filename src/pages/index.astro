@@ -1,0 +1,177 @@
+---
+
+import NavBar from '../layouts/NavBar.astro';
+import Footer from '../layouts/Footer.astro';
+import Card from '../layouts/Card.astro';
+import Card2 from '../layouts/Card2.astro';
+
+
+---
+
+<html data-theme="dark" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="title" content="Steve Sultan Dev">
+		<meta name="description" content="Full stack and mobile developer">
+		<meta name="keywords" content="stevesultan, steve, sultan, fullStack developer, front end developer, back end developer, cloud developer, css , html, javascript developer, react, vue, nodejs, c# developer, mobile developer, aws developer, severless developer, api developer">
+		<meta name="robots" content="index, follow">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="language" content="English">
+		<meta name="author" content="Steve Sultan">
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
+		
+	</head>
+	
+	<body class="text-gray-800 antialiased">
+	
+	<NavBar />
+
+    <main class="profile-page">
+
+      <section class="relative block" style="height: 500px;">
+        <div
+          class="absolute top-0 w-full h-full bg-center bg-cover"
+          style='background-image: url("https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2710&amp;q=80");'
+        >
+          <span
+            id="blackOverlay"
+            class="w-full h-full absolute opacity-50 bg-black"
+          ></span>
+        </div>
+        <div
+          class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
+          style="height: 70px;"
+        >
+          <svg
+            class="absolute bottom-0 overflow-hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            version="1.1"
+            viewBox="0 0 2560 100"
+            x="0"
+            y="0"
+          >
+            <polygon
+              class="text-gray-300 fill-current"
+              points="2560 0 2560 100 0 100"
+            ></polygon>
+          </svg>
+        </div>
+      </section>
+
+      <section class="relative py-16 bg-gray-300">
+        <div class="container mx-auto px-4">
+          <div
+            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64"
+          >
+            <div class="px-6">
+              <div class="flex flex-wrap justify-center">
+                <div
+                  class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center"
+                >
+                  <div class="relative">
+                    <img
+                      alt="..."
+                      src="../../public/images/profile2.jpg"
+                      class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16"
+                      style="max-width: 200px; margin-left: -6rem;"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center"
+                >
+                  <div class="py-6 px-3 mt-32 sm:mt-0">
+                    <button
+                      class="bg-neutral active:bg-pink-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1"
+                      type="button"
+                      style="transition: all 0.15s ease 0s;"
+                    >
+                      CONTACT
+                    </button>
+                  </div>
+                </div>
+               
+			    <div class="w-full lg:w-4/12 px-4 lg:order-1">
+                  <div class="flex justify-center py-4 lg:pt-4 pt-8">
+                    <!-- <div class="mr-4 p-3 text-center">
+                      <span
+                        class="text-xl font-bold block uppercase tracking-wide text-gray-700"
+                        >22</span
+                      ><span class="text-sm text-gray-500">Friends</span>
+                    </div>
+                    <div class="mr-4 p-3 text-center">
+                      <span
+                        class="text-xl font-bold block uppercase tracking-wide text-gray-700"
+                        >10</span
+                      ><span class="text-sm text-gray-500">Photos</span>
+                    </div>
+                    <div class="lg:mr-4 p-3 text-center">
+                      <span
+                        class="text-xl font-bold block uppercase tracking-wide text-gray-700"
+                        >89</span
+                      ><span class="text-sm text-gray-500">Comments</span>
+                    </div> -->
+	
+					
+                  </div>
+                </div>
+				
+              </div>
+              <div class="text-center mt-12">
+			  <div class="m-6 indicator">
+  <div class="indicator-item badge badge-primary">Open to work</div> 
+                <h3
+                  class="text-4xl font-semibold leading-normal mb-2 text-gray-800 mb-2"
+                >
+                  Steve Sultan
+                </h3>
+				</div>
+                <div
+                  class="text-sm leading-normal mt-0 mb-2 text-gray-500 font-bold uppercase"
+                >
+                  <i
+                    class="fas fa-map-marker-alt mr-2 text-lg text-gray-500"
+                  ></i>
+                  Toronto, Canada 
+                </div>
+                <div class="mb-2 text-gray-700 mt-10">
+                  <i class="fas fa-briefcase mr-2 text-lg text-gray-500"></i
+                  >Full Stack Developer / Mobile Developer
+                </div>
+                <div class="mb-2 text-gray-700">
+                  <i class="fas fa-university mr-2 text-lg text-gray-500"></i
+                  >Markitech AI INC.
+                </div>
+              </div>
+              <div class="mt-10 py-10 border-t border-gray-300 text-center">
+                <div class="flex flex-wrap justify-center">
+                 
+                   <Card2/>
+                    
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+	</main>
+
+	<Footer/>
+  </body>
+  <script>
+    function toggleNavbar(collapseID) {
+      document.getElementById(collapseID).classList.toggle("hidden");
+      document.getElementById(collapseID).classList.toggle("block");
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+	
+</html>
