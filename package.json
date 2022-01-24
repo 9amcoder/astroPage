@@ -13,6 +13,7 @@
     "tailwindcss": "^3.0.15"
   },
   "dependencies": {
-    "daisyui": "^1.24.2"
+    "daisyui": "^1.24.2",
+    "emailjs-com": "^3.2.0"
   }
 }
