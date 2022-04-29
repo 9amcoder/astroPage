@@ -165,7 +165,8 @@ import Footer from '../layouts/Footer.astro';
                 
               </div>
               <div class="flex flex-col justify-center my-3" >
-                    <form action="https://submit-form.com/2hEJ2Thb"
+
+                    <form id="form" action="https://submit-form.com/2hEJ2Thb"
 			  data-botpoison-public-key="pk_2d9e12de-5fa6-4a6d-8cb1-a1cf02209d6c"
 			    >
                     <!-- <div class="flex flex-row justify-center">
@@ -210,10 +211,23 @@ import Footer from '../layouts/Footer.astro';
                       required=""
                     ></textarea> -->
                     <div class="flex flex-row justify-center">
-                    <button class="btn btn-wide justify-center" type="submit">Submit</button>
+                    <button id="button" class="btn btn-wide justify-center" type="submit">Submit</button>
                     </div>
                     <!-- <button type="submit">Send</button> -->
                   </form>
+			<script>
+			  var formElement = document.getElementById("form");
+			  var buttonElement = document.getElementById("button");
+			  formElement.addEventListener("botpoison-challenge-start", function () {
+			    buttonElement.setAttribute("disabled", "disabled");
+			  });
+			  formElement.addEventListener("botpoison-challenge-success", function () {
+			    buttonElement.removeAttribute("disabled");
+			  });
+			  formElement.addEventListener("botpoison-challenge-error", function () {
+			    buttonElement.removeAttribute("disabled");
+			  });
+			</script>
                 </div>
             </div>
           </div>
@@ -227,10 +241,9 @@ import Footer from '../layouts/Footer.astro';
 
 	<Footer/>
   </body>
-
-  <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
-	 <!-- 1. Import the @botpoison/browser script -->
-  <script src="https://unpkg.com/@botpoison/browser" async></script>
+		       <!-- 1. Import the @botpoison/browser script -->
+ 	<script src="https://unpkg.com/@botpoison/browser" async></script>
+  	<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
 	    
 	
 </html>
